@@ -1,0 +1,16 @@
+2018-03-03 21:21:17.569 +00:00 [INF] Started at "2018-03-03T21:21:17.5617844+00:00" and 0x42 is hex of 42
+2018-03-03 21:21:18.810 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2018-03-03 21:21:19.302 +00:00 [INF] Request finished in 506.2117ms 404 
+2018-03-03 21:27:28.619 +00:00 [INF] Started at "2018-03-03T21:27:28.6116629+00:00" and 0x42 is hex of 42
+2018-03-03 21:27:29.227 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Token/  
+2018-03-03 21:27:29.303 +00:00 [INF] Policy execution successful.
+2018-03-03 21:27:29.308 +00:00 [INF] Request finished in 91.9834ms 204 
+2018-03-03 21:27:29.323 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/Token/ application/json-patch+json 57
+2018-03-03 21:27:29.327 +00:00 [INF] Policy execution successful.
+2018-03-03 21:27:29.669 +00:00 [INF] Executing action method JwtServer.Controllers.TokenController.CreateToken (JwtServer) with arguments (["JwtServer.Controllers.TokenController+Key"]) - ModelState is "Valid"
+2018-03-03 21:27:29.695 +00:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-03-03 21:27:29.712 +00:00 [INF] Executed action JwtServer.Controllers.TokenController.CreateToken (JwtServer) in 133.6813ms
+2018-03-03 21:27:29.718 +00:00 [INF] Request finished in 394.7656ms 200 application/json; charset=utf-8
+2018-03-03 21:36:03.837 +00:00 [INF] %windir%\logs\JwtServer/logfile.log\Started at "2018-03-03T21:36:03.8289226+00:00" and 0x42 is hex of 42
+2018-03-03 21:36:04.231 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2018-03-03 21:36:04.410 +00:00 [INF] Request finished in 186.2806ms 404 

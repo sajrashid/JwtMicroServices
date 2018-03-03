@@ -1,0 +1,12 @@
+2018-03-03 21:27:18.200 +00:00 [INF] Started at "2018-03-03T21:27:18.1930747+00:00" and 0x42 is hex of 42
+2018-03-03 21:27:19.951 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5005/js/main.js  
+2018-03-03 21:27:20.268 +00:00 [INF] The file /js/main.js was not modified
+2018-03-03 21:27:20.300 +00:00 [INF] Request finished in 365.0816ms 304 application/javascript
+2018-03-03 21:27:22.359 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5005/index.html  
+2018-03-03 21:27:22.363 +00:00 [INF] The file /index.html was not modified
+2018-03-03 21:27:22.375 +00:00 [INF] Request finished in 16.6071ms 304 text/html
+2018-03-03 21:27:22.634 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5005/favicon.ico  
+2018-03-03 21:27:22.640 +00:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\Sajid\source\repos\JwtWebAPI\src\TestClients\JavaScript\wwwroot\favicon.ico'
+2018-03-03 21:27:22.657 +00:00 [INF] Request finished in 22.8903ms 200 image/x-icon
+2018-03-03 21:35:02.363 +00:00 [INF] %windir%\logs\JavaScriptClient/logfile.log\Started at "2018-03-03T21:34:59.9139709+00:00" and 0x42 is hex of 42
+2018-03-03 21:38:42.948 +00:00 [INF] C:\JavaScriptClient\Started at "2018-03-03T21:38:41.9637886+00:00" and 0x42 is hex of 42
