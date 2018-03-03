@@ -30,10 +30,13 @@ namespace Extensions.Logger
             {
             var windir = Environment.GetEnvironmentVariable("WinDir");
             var callingAppName = env.ApplicationName;
-            var logfileFolder = (windir + "\\logs\\" + callingAppName);
+            var logfileFolder =string.Empty;
 
+            // local machine for dev work logfiles save to c:\windows\logs\AppName
             if (env.IsDevelopment())
             {// logfiles save in %windir%/log
+                 logfileFolder = (windir + "\\logs\\" + callingAppName);
+
                 bool IsFolderCreated = Directory.Exists(logfileFolder);
                 if (!IsFolderCreated)
                 {
@@ -44,6 +47,12 @@ namespace Extensions.Logger
             if (env.IsStaging())
             {// logfiles save 
                //TODO
+            }
+
+            if (env.IsProduction())
+            {// logfiles save 
+             //TODO
+
             }
 
             if (env.IsProduction())
