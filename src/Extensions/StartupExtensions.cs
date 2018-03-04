@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace Extensions
     {
-        public static class Extensions
+        public static class StartupExtensions
         {
             public static IServiceCollection AddExtensionsConfig(this IServiceCollection services)
             {

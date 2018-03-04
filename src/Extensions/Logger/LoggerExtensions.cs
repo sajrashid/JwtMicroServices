@@ -55,11 +55,7 @@ namespace Extensions.Logger
 
             }
 
-            if (env.IsProduction())
-            {// logfiles save 
-               //TODO
-
-            }
+          
 
 
 
