@@ -23,7 +23,7 @@ namespace JwtServer
         public void ConfigureServices(IServiceCollection services)
         {
           
-            // add Extensions
+            // Most of the confguration is in the Extensions
             services.AddExtensionsConfig();
              
 
@@ -45,10 +45,7 @@ namespace JwtServer
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+           
 
             // This is the error handling middleWare 
             // this traps error on invoking next
@@ -63,7 +60,7 @@ namespace JwtServer
             // at the moment it just checks if your autheticated with AD
             app.UseMiddleware<WindowsAuthenticationMiddleWare>();
 
-            // Use Extensions
+            // Use Extensions // Most of the confguration is in the Extensions
             app.UseExtensionsConfig(env);
           
 

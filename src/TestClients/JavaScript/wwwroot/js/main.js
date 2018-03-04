@@ -49,30 +49,13 @@ testJwtBtn.onclick = function () {
             },
             success: function (data) {
                 console.log('values' + data);
-                testRes.innerText = "Authorised in DOTnetCorJWTAPI!......values:" + data;
+                testRes.innerText = "Authorised in API1 ..........values:" + data;
             }
             // Fetch the stored token from localStorage and set in the header
         });
 
         // test if we can use token in the JWTTestAPi
-        $.ajax({
-            url: "http://localhost:5001/api/values",
-            type: 'GET',
-            // Fetch the stored token from localStorage and set in the header
-            beforeSend: function (xhr) {
-                xhr.setRequestHeader('Authorization', 'bearer ' + localStorage.getItem('token'));
-            },
-            contentType: "application/json-patch+json",
-            error: function (err) {
-                console.log('Error!', err.statusCode);
-                testRes.innerText = "Error!" + ':Code:' + err.status + "        Status Text " + err.statusText + " ,your token has probably expired get a new one!!!";
-            },
-            success: function (data) {
-                console.log('values' + data);
-                testRes.innerText += "</br>Authorised! on JWTTEstAPI......values:" + data;
-            }
-            // Fetch the stored token from localStorage and set in the header
-        });
+     
 
     } else {
         testRes.innerText = "valees:" + 'you need to get a token first';
@@ -86,8 +69,11 @@ getApiKeyBtn.onclick = function () {
     testRes.innerText = "...........";
 
         $.ajax({
-            url: "http://localhost:57425/api/CreateApiKeys",
+            url: "http://localhost:5000/api/CreateApiKeys",
             type: 'GET',
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'bearer ' + localStorage.getItem('token'));
+            },
             contentType: "application/json",
             error: function (err) {
                 console.log('Error!', err.statusCode);

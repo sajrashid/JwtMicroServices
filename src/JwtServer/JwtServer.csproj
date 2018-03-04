@@ -6,11 +6,14 @@
 
   <ItemGroup>
     <Folder Include="Services\Identity\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Index.html" />
   </ItemGroup>
 
   <ItemGroup>
