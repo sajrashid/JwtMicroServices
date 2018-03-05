@@ -3,7 +3,7 @@
 
 # Motivation
 
-This project was born on the desire to share configration across many API's,
+This project was born out of the desire to share configration across many API's,
 
 DOT net core require configuration usually in startup.cs, here we use extension classes where we hold our config,
 this means all the API's share the same logger for example and they log out to a common location, a separate folder is created for each API from the env.ApplicationName variable
