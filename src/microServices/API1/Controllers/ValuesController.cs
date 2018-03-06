@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace API1.Controllers
 {
@@ -11,10 +11,25 @@ namespace API1.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private IHttpContextAccessor _context;
+        private readonly ILogger _logger;
+   
+
+        public ValuesController(IHttpContextAccessor context,ILogger<ValuesController> logger)
+        {
+            _logger = logger;
+            _context = context;
+           
+
+        }
+
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            //var name = (ClaimsIdentity)User.Identity.Name.ToString();
+
             return new string[] { "value1", "value2" };
         }
 
@@ -29,6 +44,7 @@ namespace API1.Controllers
         [HttpPost]
         public void Post([FromBody]string value)
         {
+
         }
 
         // PUT api/values/5

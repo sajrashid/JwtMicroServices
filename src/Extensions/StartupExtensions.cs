@@ -37,10 +37,36 @@ namespace Extensions
             public static IApplicationBuilder UseExtensionsConfig(this IApplicationBuilder app, IHostingEnvironment env)
             {
 
-                if (env.IsDevelopment())
-                {
-                    app.UseDeveloperExceptionPage();
-                }
+            if (env.IsLocal())
+            {
+                app.UseDeveloperExceptionPage();
+
+            }
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            if (env.IsSIT())
+            {
+             //TODO
+
+            }
+
+            if (env.IsUAT())
+            {
+             //TODO
+
+            }
+
+
+            if (env.IsProduction())
+            { 
+             //TODO
+
+            }
+          
 
                 // auth
                 app.UseAuthentication();

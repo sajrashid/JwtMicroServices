@@ -43,17 +43,36 @@ namespace Extensions.Logger
                     Directory.CreateDirectory(logfileFolder);
                 }
             }
-
-            if (env.IsStaging())
+            if (env.IsLocal())
             {// logfiles save 
-               //TODO
+             //TODO
+
             }
+
+            if (env.IsDevelopment())
+            {// logfiles save 
+             //TODO
+            }
+
+            if (env.IsSIT())
+            {// logfiles save 
+             //TODO
+
+            }
+
+            if (env.IsUAT())
+            {// logfiles save 
+             //TODO
+
+            }
+
 
             if (env.IsProduction())
             {// logfiles save 
              //TODO
 
             }
+         
 
           
 

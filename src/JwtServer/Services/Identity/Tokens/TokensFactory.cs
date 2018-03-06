@@ -18,7 +18,7 @@ namespace JwtServer.Services.Identity.Tokens
         /// </summary>
         /// <param name="Claims"></param>
         /// <returns></returns>
-        public string CreateToken(List<Claim> Claims)
+        public string CreateToken(List<Claim> claims)
         {
             // JWT Key we can use app.settings
             //TODO get key from Appsetting for dev
@@ -38,6 +38,7 @@ namespace JwtServer.Services.Identity.Tokens
             var Token = new JwtSecurityToken(
               issuer: "localhost",
               audience: "localhost",
+              claims: claims,
               expires: DateTime.Now.AddMinutes(1),
               signingCredentials: Creds);
 

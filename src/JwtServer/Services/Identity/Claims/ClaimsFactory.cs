@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 
@@ -21,19 +22,27 @@ namespace JwtServer.Services.Identity.Claims
         /// <returns></returns>
         public List<Claim> CreateJwtClaims( String UserId, List<String> Roles) //use name like mule for anonymous/JWT users
         {
+
+
+          
+
+
             // create a list of claims and add userId 
-            var Claims = new List<Claim>
+            var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, UserId)
+              new Claim(ClaimsIdentity.DefaultNameClaimType, UserId),
+              new Claim(JwtRegisteredClaimNames.Sub, UserId),
+              new Claim(JwtRegisteredClaimNames.NameId, UserId),
+
             };
             // add roles to the claims list
             // for every role add a new claim type role
             foreach (var role in Roles)
             {
-                Claims.Add(new Claim(ClaimTypes.Role, role));
+                claims.Add(new Claim(ClaimTypes.Role, role));
             }
-
-           return Claims;
+            // var identity = new ClaimsIdentity(claims);
+            return claims;
         }
 
 
